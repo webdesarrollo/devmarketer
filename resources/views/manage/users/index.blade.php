@@ -7,8 +7,8 @@
         <h1 class="title">Manage Users</h1>
       </div>
       <div class="column">
-        <a href="{{route('users.create')}}" class="button is-primary">
-          <i class="fa fa-user-add m-r-10 is-pulled-right"></i> Create New Users
+        <a href="{{route('users.create')}}" class="button is-primary  is-pulled-right">
+          <i class="fa fa-user-add m-r-10"></i> Create New Users
         </a>
       </div>
     </div>
@@ -20,7 +20,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Date Created</th>
-        <th>Actions</th>
+        <th></th>
       </thead>
       <tbody>
         @foreach ($users as $user)
@@ -30,9 +30,12 @@
           <td>
             {{$user->created_at->toFormattedDateString()}}
           </td>
-          <td>
-            <a href="{{route('users.edit', $user->id)}}" class="button is-outlined">
+          <td class="has-text-right">
+            <a href="{{route('users.edit', $user->id)}}" class="button is-outlined is-info">
               Edit
+            </a>
+            <a href="{{route('users.show', $user->id)}}" class="button is-outlined">
+              Show
             </a>
           </td>
         </tr>

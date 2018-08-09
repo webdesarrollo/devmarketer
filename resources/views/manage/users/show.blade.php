@@ -16,17 +16,27 @@
           </a>
         </div>
         <div class="column is-half">
-        <div class="field">
-          <label for="name">Name</label>
-          <pre>{{$user->name}}</pre>
-        </div>
+          <div class="field">
+            <label for="name">Name</label>
+            <pre>{{$user->name}}</pre>
+          </div>
 
-        <div class="field">
-          <label for="email">Email</label>
-          <pre>{{$user->email}}</pre>
+          <div class="field">
+            <label for="email">Email</label>
+            <pre>{{$user->email}}</pre>
+          </div>
+
+          <div class="field">
+            <label for="email">Roles</label>
+            <ul>
+              {{$user->roles->count() == 0 ? 'This user has not assigned any Rol yet' : ''}}
+              @foreach ($user->roles as $role)
+                <li>{{$role->display_name}} <pre>{{$role->description}}</pre></li>
+              @endforeach
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 @endsection
