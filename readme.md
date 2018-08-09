@@ -43,8 +43,10 @@ composer require devmarketer/easynav
 ```
 php artisan vendor:publish --tag=easynav
 ```
-check config default_class and in navigation class
+check config default_class
 ```
+IN THE NAVMENU
+
 <a href="{{route('manage.dashboard')}}" class="{{Nav::isRoute('manage.dashboard')}}">Dashboard</a>
 or
 <a href="{{route('users.index')}}" class="{{Nav::isResource('users')}}">Manage Users</a>
