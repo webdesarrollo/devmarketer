@@ -986,11 +986,11 @@ window.Vue = __webpack_require__(34);
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
+/*
 var app = new Vue({
-  el: '#app',
-  data: {}
-});
+  el:'#app',
+  data:{}
+});*/
 
 $(document).ready(function () {
   $('button.dropdown').hover(function (e) {

@@ -31,9 +31,9 @@ use LaratrustUserTrait & composer dump-autoload;
 
 
 
-## Contributing
+## Pagination
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+php artisan vendor:publish --tag=laravel-pagination, modificar bootstrap-4.blade.php
 
 ## Security Vulnerabilities
 
