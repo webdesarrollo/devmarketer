@@ -30,14 +30,24 @@ use LaratrustUserTrait & composer dump-autoload;
 - php artisan db:seed
 
 
-
 ## Pagination
 
 php artisan vendor:publish --tag=laravel-pagination, modificar bootstrap-4.blade.php
 
-## Security Vulnerabilities
+## Submenu with Laravel EasyNav Package
+ [Link DevMarketer](https://github.com/DevMarketer/LaravelEasyNav/blob/master/README.md)
+ 
+```
+composer require devmarketer/easynav
+```
+```
+php artisan vendor:publish --tag=easynav
+```
+check config default_class and in navigation class
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<a href="{{route('manage.dashboard')}}" class="{{Nav::isRoute('manage.dashboard')}}">Dashboard</a>
+or
+<a href="{{route('users.index')}}" class="{{Nav::isResource('users')}}">Manage Users</a>
 
 ## License
 
