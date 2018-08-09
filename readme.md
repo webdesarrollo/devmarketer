@@ -36,7 +36,7 @@ php artisan vendor:publish --tag=laravel-pagination, modificar bootstrap-4.blade
 
 ## Submenu with Laravel EasyNav Package
  [Link DevMarketer](https://github.com/DevMarketer/LaravelEasyNav/blob/master/README.md)
- 
+
 ```
 composer require devmarketer/easynav
 ```
@@ -44,11 +44,11 @@ composer require devmarketer/easynav
 php artisan vendor:publish --tag=easynav
 ```
 check config default_class and in navigation class
-
+```
 <a href="{{route('manage.dashboard')}}" class="{{Nav::isRoute('manage.dashboard')}}">Dashboard</a>
 or
 <a href="{{route('users.index')}}" class="{{Nav::isResource('users')}}">Manage Users</a>
-
+```
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
