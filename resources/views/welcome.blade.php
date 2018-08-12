@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  <h1>N[_]ISY</h1>
+                  <h1 style="letter-spacing: 16px;">N[~]ISY</h1>
                 </div>
             </div>
         </div>

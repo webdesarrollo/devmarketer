@@ -1,4 +1,4 @@
-<div class="side-menu">
+<div class="side-menu" id="admin-side-menu">
   <aside class="menu m-t-30 m-l-10">
     <p class="menu-label">
       GENERAL
@@ -10,7 +10,18 @@
         </a>
       </li>
     </ul>
-
+    <!--Posts-->
+    <p class="menu-label">
+      CONTENT
+    </p>
+    <ul class="menu-list">
+      <li>
+        <a href="{{route('posts.index')}}" class="{{Nav::isResource('posts', 2)}}">
+          Blog Posts
+        </a>
+      </li>
+    </ul>
+    <!--Administration-->
     <p class="menu-label">
       ADMINISTRATION
     </p>
@@ -47,7 +58,7 @@
             <a href="#">item</a>
           </li>
           <li>
-            <a href="#}">
+            <a href="#">
               item
             </a>
           </li>
@@ -63,7 +74,7 @@
             <a href="#">item</a>
           </li>
           <li>
-            <a href="#}">
+            <a href="#">
               item
             </a>
           </li>

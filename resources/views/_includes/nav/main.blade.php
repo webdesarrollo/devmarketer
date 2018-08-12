@@ -4,6 +4,12 @@
       <a class="navbar-item" href="{{route('home')}}">
         <img src="{{asset('images/logo2.png')}}" alt="logo" width="112" height="28">
       </a>
+      @if(Request::segment(1) == 'manage')
+        <!--side-menu-->
+        <a class="navbar-item is-hidden-desktop" id="admin-slideout-button">
+          <span><i class="fa fa-arrow-circle-o-right"></i></span>
+        </a>
+      @endif
       <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
         <span></span>
         <span></span>

@@ -33,7 +33,9 @@
               @endif
             </div>
 
-            <b-checkbox name="remember" class="m-t-15">Remenber Me</b-checkbox>
+            <div class="field">
+              <b-checkbox name="remember" class="m-t-15">Remenber Me</b-checkbox>
+            </div>
             <button type="submit" name="button" class="button is-primary  is-fullwidth m-t-20">Log In</button>
           </form>
         </div>
@@ -46,4 +48,13 @@
     </div>
   </div>
 </div>
+@endsection
+@section('scripts')
+  <script>
+    var app = new Vue ({
+      el:'#app',
+      data: {
+      }
+    })
+  </script>
 @endsection

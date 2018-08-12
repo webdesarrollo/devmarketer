@@ -28,6 +28,7 @@ use LaratrustUserTrait & composer dump-autoload;
 - php artisan laratrusst:seeder call DatabaseSeeder $this->call(LaratrustSeeder::class);
 - laratrust_seeder.php en config, las configuraciones de roles y permisos
 - php artisan db:seed
+- para que no de abort 'handling' => 'redirect', y 'params' => 'login' va ir al login no tiene permisos
 
 
 ## Pagination
@@ -51,6 +52,15 @@ IN THE NAVMENU
 or
 <a href="{{route('users.index')}}" class="{{Nav::isResource('users')}}">Manage Users</a>
 ```
+## Slug post quitar espacios en blaco acentos y caracteres
+by /dodo/node-slug
+```
+npm install slug
+
+```
+import in  app.js window.Slug = require('slug');
+
+como no me funciono cambie cocur/slugify, window.slugify = require('slugify');
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

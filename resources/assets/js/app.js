@@ -1,11 +1,13 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+//window.Slug = require('slug');
+window.slugify = require('slugify');
 import Buefy from 'buefy';
 
 Vue.use(Buefy);
 
-//Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('slug-widget',require('./components/SlugWidget.vue'));
 /*
 var app = new Vue({
   el:'#app',
