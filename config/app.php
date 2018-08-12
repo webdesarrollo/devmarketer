@@ -157,6 +157,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        /*Otros*/
+        App\Providers\ObserverServiceProvider::class,
 
     ],
 

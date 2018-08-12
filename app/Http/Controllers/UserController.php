@@ -29,7 +29,8 @@ class UserController extends Controller
      */
     public function create()
     {
-      return view('manage.users.create');
+      $roles=Role::all();
+      return view('manage.users.create')->withRoles($roles);
     }
 
     /**
@@ -62,6 +63,10 @@ class UserController extends Controller
       $user->email = $request->email;
       $user->password = Hash::make($password);
       $user->save();
+
+      if ($request->roles) {
+        $user->syncRoles(explode(',', $request->roles));
+      }
 
       if ($user->save()) {
         return redirect()->route('users.show', $user->id);
